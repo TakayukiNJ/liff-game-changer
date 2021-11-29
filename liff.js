@@ -17,26 +17,6 @@ function initializeLiff(liffId) {
         });
 }
 
-var params = (new URL(document.location)).searchParams;
-var key = params.get('key');
-
-$(function () {
-    // 送信
-    $('form').submit(function () {
-        var name = $('input[name="title"]').val();
-        var name = $('input[name="url"]').val();
-        var reasons = $('textarea[name="reasons"]').val();
-        // var date = $('input[name="date"]').val();
-        // var tool = $('input[name="tool"]').val();
-        
-        //var msg = `${key}\n朝礼/終礼不参加の理由：${reasons}\n返信期限：${date}\n使用ツール：${tool}`;
-        var msg = `${key}\n作品のタイトル：${title}\nURL：${name}\n作品への想い：${reasons}`;
-        sendText(msg);
-
-        return false;
-    });
-});
-
 function sendText(text) {
     // sendMessages(text);
 // }
