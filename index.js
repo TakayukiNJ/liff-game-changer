@@ -8,7 +8,7 @@ $(function () {
         var url = $('input[name="url"]').val();
         var reasons = $('textarea[name="reasons"]').val();
         
-        var msg = `${key}\n作品のタイトル：${title}\nURL：${url}\n作品への想い：${reasons}`;
+        var msg = `作品のタイトル：${title}\nURL：${url}\n作品への想い：${reasons}`;
         sendText(msg);
 
         return false;
